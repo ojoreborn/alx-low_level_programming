@@ -2,13 +2,11 @@
 #include <stdio.h>
 
 /**
- * print_to_98 - function that prints natural numbers
+ * print_to_98 - function to print natural numbers
  *
- * @n: parameter function
- *
+ * @n: parameter functions
  * Return: always 0
  */
-
 
 void print_to_98(int n)
 {
@@ -32,9 +30,9 @@ void print_to_98(int n)
 	}
 	else if (n > 98)
 	{
-		for (i = n ; i > 98 ; i--)
+		for (i = n ; i >= 98 ; i--)
 		{
-			printf("%d, ", n);
+			printf("%d, ", i);
 		}
 		printf("\n");
 	}
