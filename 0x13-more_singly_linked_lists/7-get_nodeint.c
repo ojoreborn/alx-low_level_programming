@@ -10,15 +10,20 @@
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	listint_t *nds = head;
+	unsigned int real_index = 0;
+	listint_t *real_node = head;
 
-	for (unsigned int i = 0; nds != NULL && i < index; i++)
+	while (real_index && real_node < index)
 	{
-		nds = nds->next;
+		real_node = real_node->next;
+		real_index++;
 	}
-	if (nds == NULL)
+	if (real_node)
+	{
+		return (real_node);
+	}
+	else
 	{
 		return (NULL);
 	}
-	return (nds);
 }
